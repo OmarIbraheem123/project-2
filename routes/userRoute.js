@@ -12,10 +12,6 @@ router.post('/', userCtrl.createUser)
 router.post('/login', userCtrl.loginUser)
 
 
-//GET
-router.get('/:id', userCtrl.auth, userCtrl.showUser)
-
-
 //PUT
 router.put('/:id', userCtrl.auth, userCtrl.updateUser)
 

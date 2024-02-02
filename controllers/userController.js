@@ -21,7 +21,7 @@ exports.createUser = async (req, res) => {
   try{
     const user = new User(req.body)
     await user.save()
-    res.json({ user})
+    res.json(user)
   } catch(error){
     res.status(400).json({message: error.message})
   }
@@ -44,10 +44,9 @@ exports.loginUser = async (req, res) => {
 exports.updateUser = async (req, res) => {
   try{
     const updates = Object.keys(req.body)
-    const user = await User.findOne({ _id: req.params.id })
-    updates.forEach(update => user[update] = req.body[update])
-    await user.save()
-    res.json(user)
+    updates.forEach(update => req.user[update] = req.body[update])
+    await req.user.save()
+    res.json(req.user)
   }catch(error){
     res.status(400).json({message: error.message})
   }
