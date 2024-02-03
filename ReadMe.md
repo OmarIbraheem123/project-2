@@ -5,6 +5,8 @@
 1. clone the repo 
     - git@github.com:OmarIbraheem123/project-2.git
 
+3. touch .env
+
 2. npm install :point_down:
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 ## Installation
