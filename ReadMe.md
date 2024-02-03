@@ -23,7 +23,7 @@
 ## USER 
 
     | Action | Method | Path | Action |
-    | ---| --- | --- | --- |
+    | -----------| ----------- | ----------- | ----------- |
     | create | Post | /user | Creates a User |
     | login| Post | /user/login | logs in a created User |
     | update | Put | /user:id | updates a created User |
