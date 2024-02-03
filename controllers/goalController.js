@@ -57,7 +57,6 @@ exports.delete = async function destory(req, res) {
 }
 
 
-//to push into achieved
 exports.achieved = async function achieved (req, res) {
     try {
        req.user.goals.pull(req.params.id)
